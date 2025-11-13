@@ -1,5 +1,50 @@
-<html>
-  <header>Hello</header>
-  <body><a href="https://github.com/hillaryzelasko/D424-MobileApp/raw/refs/heads/main/WGUTermTracker/WGUTermTracker/bin/Release/net9.0-android/publish/com.companyname.wgutermtracker-Signed.apk">Term Tracking Mobile Application APK</a></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hillary Zelasko · Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main>
+    <div class="toolbar">
+      <span class="pill" id="experience-years"></span>
+      <div>
+        <button id="theme-toggle" type="button">Switch Theme</button>
+        <a class="pill" id="download-resume" href="#" download>Download PDF</a>
+      </div>
+    </div>
+    <header>
+      <h1>Hillary Zelasko</h1>
+      <p id="tagline"></p>
+      <div class="contact" id="contact"></div>
+    </header>
 
-  </html>
+    <section id="skills">
+      <h2>Core Skills</h2>
+      <ul class="skills-list"></ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid"></div>
+    </section>
+
+    <section id="projects">
+      <h2>Highlighted Projects</h2>
+      <div class="grid"></div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid"></div>
+    </section>
+  </main>
+
+  <script src="assets/resume.js"></script>
+</body>
+</html>
