@@ -1,6 +1,6 @@
 const resume = {
   tagline:
-    'Experienced healthcare administrative professional focused on optimizing utilization management workflows, data accuracy, and member experiences through automation and cross-functional collaboration.',
+    'Experienced healthcare administrative professional with a strong background in utilization management and operational efficiency. Skilled in automating workflows, improving data accuracy, and supporting cross-functional teams to enhance productivity and quality. Known for identifying process gaps and developing practical, technology-driven solutions using Power Automate Desktop and Excel. Passionate about optimizing systems that improve both team performance and the member experience.',
   contact: [
     { label: 'Phone', value: '502-902-7727', href: 'tel:5029027727' },
     {
@@ -86,13 +86,21 @@ const resume = {
     {
       school: 'Western Governors University',
       degree: 'B.S. Software Engineering',
-      timeframe: 'In progress',
+      timeframe: 'Graduated',
       details: [
         'Focused on software engineering principles, automation, and data-driven problem solving.'
       ]
+    },
+        {
+      school: 'Western Governors University',
+      degree: 'M.S. Data Analytics',
+      timeframe: 'In Progress',
+      details: [
+        'Focusing on statistical data mining, machine learning, and data optimization.'
+      ]
     }
   ],
-  resumeDownload: '#',
+  resumeDownload: '../Hillary Zelasko - Resume 2025.docx',
   careerStartYear: 2006
 };
 
