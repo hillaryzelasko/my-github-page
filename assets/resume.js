@@ -73,6 +73,20 @@ const resume = {
       ]
     }
   ],
+  projects: [
+    {
+      name: 'Care Coordination Angular Portal',
+      description:
+        'Angular-based workflow portal that automates utilization management routing and provides self-service tooling for clinical teams.',
+      repo: 'https://github.com/HillaryZelasko/angular-care-coordination'
+    },
+    {
+      name: 'Mobile Care Companion',
+      description:
+        'Cross-platform mobile application that equips field staff with offline task tracking, secure documentation, and rapid status updates.',
+      repo: 'https://github.com/HillaryZelasko/mobile-care-companion'
+    }
+  ],
   certifications: [
     'Microsoft Client/Server',
     'CSS/HTML/JavaScript',
@@ -142,12 +156,31 @@ const renderExperience = (experience) => {
   return card;
 };
 
-const renderCertification = (certification) => {
+const renderProject = (project) => {
   const card = document.createElement('article');
-  card.className = 'card';
+  card.className = 'card project-card';
   card.innerHTML = `
-    <h3>${certification}</h3>
+    <h3>${project.name}</h3>
+    <p>${project.description}</p>
+    <a class="project-link" href="${project.repo}" target="_blank" rel="noreferrer">View Repository</a>
   `;
+  return card;
+};
+
+const renderCertifications = (certifications) => {
+  const card = document.createElement('article');
+  card.className = 'card compact-card';
+  card.innerHTML = `
+    <h3>Professional Certifications</h3>
+  `;
+  const list = document.createElement('ul');
+  list.className = 'certifications-list';
+  certifications.forEach((certification) => {
+    const item = document.createElement('li');
+    item.textContent = certification;
+    list.appendChild(item);
+  });
+  card.appendChild(list);
   return card;
 };
 
@@ -180,7 +213,13 @@ const hydrate = () => {
     return li;
   });
   mountList('#experience .grid', resume.experience, renderExperience);
-  mountList('#certifications .grid', resume.certifications, renderCertification);
+  mountList('#projects .grid', resume.projects, renderProject);
+
+  const certificationGrid = document.querySelector('#certifications .grid');
+  if (certificationGrid) {
+    certificationGrid.innerHTML = '';
+    certificationGrid.appendChild(renderCertifications(resume.certifications));
+  }
   mountList('#education .grid', resume.education, renderEducation);
 
   const years = new Date().getFullYear() - resume.careerStartYear;
