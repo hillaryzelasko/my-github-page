@@ -185,12 +185,21 @@ body.dark .card {
   margin-top: 1rem;
 }
 
+.project-images--small {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  justify-items: center;
+}
+
 .project-images img {
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(76, 139, 245, 0.18);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
   object-fit: cover;
+}
+
+.project-images--small img {
+  max-width: 180px;
 }
 
 body.dark .project-images img {

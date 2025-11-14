@@ -89,6 +89,7 @@ const resume = {
       description:
         'Cross-platform mobile application with offline term, courses, note, and assessment tracking.',
       repo: 'https://github.com/hillaryzelasko/D424-MobileApp',
+      imageSize: 'small',
       images: [
         { src: 'imgs/img3.jpg', alt: 'Mobile app dashboard for tracking terms' },
         { src: 'imgs/img4.jpg', alt: 'Course detail view in term tracking mobile app' }
@@ -174,7 +175,11 @@ const renderProject = (project) => {
   `;
   if (project.images?.length) {
     const gallery = document.createElement('div');
-    gallery.className = 'project-images';
+    const classNames = ['project-images'];
+    if (project.imageSize) {
+      classNames.push(`project-images--${project.imageSize}`);
+    }
+    gallery.className = classNames.join(' ');
     project.images.forEach((image) => {
       const img = document.createElement('img');
       img.src = image.src;
