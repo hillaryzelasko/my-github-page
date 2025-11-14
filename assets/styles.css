@@ -178,6 +178,26 @@ body.dark .card {
   text-decoration: underline;
 }
 
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.project-images img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(76, 139, 245, 0.18);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+  object-fit: cover;
+}
+
+body.dark .project-images img {
+  border-color: rgba(225, 239, 253, 0.22);
+  box-shadow: 0 8px 22px rgba(2, 6, 23, 0.45);
+}
+
 body.dark .pill {
   background: rgba(76, 139, 245, 0.22);
   color: #e1effd;
