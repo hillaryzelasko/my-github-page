@@ -75,16 +75,16 @@ const resume = {
   ],
   projects: [
     {
-      name: 'Care Coordination Angular Portal',
+      name: 'Angular World Map',
       description:
-        'Angular-based workflow portal that automates utilization management routing and provides self-service tooling for clinical teams.',
-      repo: 'https://github.com/HillaryZelasko/angular-care-coordination'
+        'Angular-based world map listing basic API based country information.',
+      repo: 'https://github.com/hillaryzelasko/Angular-Map'
     },
     {
-      name: 'Mobile Care Companion',
+      name: 'Term Tracking Mobile Application',
       description:
-        'Cross-platform mobile application that equips field staff with offline task tracking, secure documentation, and rapid status updates.',
-      repo: 'https://github.com/HillaryZelasko/mobile-care-companion'
+        'Cross-platform mobile application with offline term, courses, note, and assessment tracking.',
+      repo: 'https://github.com/hillaryzelasko/D424-MobileApp'
     }
   ],
   certifications: [
