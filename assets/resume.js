@@ -89,6 +89,8 @@ const resume = {
       description:
         'Cross-platform mobile application with offline term, courses, note, and assessment tracking.',
       repo: 'https://github.com/hillaryzelasko/D424-MobileApp',
+      download:
+        'https://github.com/hillaryzelasko/D424-MobileApp/raw/refs/heads/main/WGUTermTracker/WGUTermTracker/bin/Release/net9.0-android/publish/com.companyname.wgutermtracker-Signed.apk',
       imageSize: 'small',
       images: [
         { src: 'imgs/img3.jpg', alt: 'Mobile app dashboard for tracking terms' },
@@ -171,8 +173,31 @@ const renderProject = (project) => {
   card.innerHTML = `
     <h3>${project.name}</h3>
     <p>${project.description}</p>
-    <a class="project-link" href="${project.repo}" target="_blank" rel="noreferrer">View Repository</a>
   `;
+
+  const links = document.createElement('div');
+  links.className = 'project-links';
+
+  const repoLink = document.createElement('a');
+  repoLink.className = 'project-link';
+  repoLink.href = project.repo;
+  repoLink.target = '_blank';
+  repoLink.rel = 'noreferrer';
+  repoLink.textContent = 'View Repository';
+  links.appendChild(repoLink);
+
+  if (project.download) {
+    const downloadLink = document.createElement('a');
+    downloadLink.className = 'project-link';
+    downloadLink.href = project.download;
+    downloadLink.target = '_blank';
+    downloadLink.rel = 'noreferrer';
+    downloadLink.textContent = 'Download App';
+    links.appendChild(downloadLink);
+  }
+
+  card.appendChild(links);
+
   if (project.images?.length) {
     const gallery = document.createElement('div');
     const classNames = ['project-images'];
