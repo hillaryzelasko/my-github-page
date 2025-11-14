@@ -63,7 +63,7 @@ const resume = {
     },
     {
       role: 'Implementation Coordinator',
-      company: 'Bank of America',
+      company: 'Bank of America Merchant Services',
       timeframe: 'April 2006 – December 2011',
       location: 'Louisville, KY',
       highlights: [
