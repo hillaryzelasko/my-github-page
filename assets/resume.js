@@ -54,7 +54,7 @@ const resume = {
       role: 'Project Coordinator',
       company: 'Network Technology Services LLC',
       timeframe: 'October 2019 – March 2022',
-      location: 'Louisville, KY',
+      location: 'Remote',
       highlights: [
         'Directed project teams, allocated resources, and balanced competing demands to keep initiatives on schedule.',
         'Managed project risks, issues, and change requests to ensure stakeholder satisfaction.',
@@ -65,7 +65,7 @@ const resume = {
       role: 'Implementation Coordinator',
       company: 'Bank of America',
       timeframe: 'April 2006 – December 2011',
-      location: 'Mississippi',
+      location: 'Louisville, KY',
       highlights: [
         'Promoted to automate high-volume data updates with speed and accuracy.',
         'Reduced SLA times by delivering a Work in Progress report via Microsoft Access.',
