@@ -191,6 +191,73 @@ const renderProject = (project) => {
   return card;
 };
 
+const setupProjectImageModal = () => {
+  const projectImages = document.querySelectorAll('.project-images img');
+  if (!projectImages.length) {
+    return;
+  }
+
+  let modal = document.querySelector('.image-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+      <div class="image-modal__backdrop" data-modal-close></div>
+      <figure class="image-modal__figure">
+        <img src="" alt="" />
+      </figure>
+      <button type="button" class="image-modal__close" aria-label="Close image" data-modal-close>&times;</button>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  const modalImage = modal.querySelector('img');
+  const closeElements = modal.querySelectorAll('[data-modal-close]');
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modalImage.src = '';
+    modalImage.alt = '';
+  };
+
+  if (!modal.dataset.bound) {
+    closeElements.forEach((element) => {
+      element.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+    modal.dataset.bound = 'true';
+  }
+
+  const openModal = (image) => {
+    modalImage.src = image.src;
+    modalImage.alt = image.alt;
+    modal.classList.add('is-open');
+  };
+
+  projectImages.forEach((image) => {
+    if (image.dataset.modalBound) {
+      return;
+    }
+    image.dataset.modalBound = 'true';
+    if (!image.hasAttribute('tabindex')) {
+      image.setAttribute('tabindex', '0');
+    }
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `${image.alt || 'Project'} (click to enlarge)`);
+    image.addEventListener('click', () => openModal(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openModal(image);
+      }
+    });
+  });
+};
+
 const renderCertifications = (certifications) => {
   const card = document.createElement('article');
   card.className = 'card compact-card';
@@ -238,6 +305,7 @@ const hydrate = () => {
   });
   mountList('#experience .grid', resume.experience, renderExperience);
   mountList('#projects .grid', resume.projects, renderProject);
+  setupProjectImageModal();
 
   const certificationGrid = document.querySelector('#certifications .grid');
   if (certificationGrid) {
