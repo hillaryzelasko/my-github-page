@@ -78,13 +78,21 @@ const resume = {
       name: 'Angular World Map',
       description:
         'Angular-based world map listing basic API based country information.',
-      repo: 'https://github.com/hillaryzelasko/Angular-Map'
+      repo: 'https://github.com/hillaryzelasko/Angular-Map',
+      images: [
+        { src: 'imgs/img1.png', alt: 'Angular world map project landing view' },
+        { src: 'imgs/img2.png', alt: 'Country details panel in Angular world map' }
+      ]
     },
     {
       name: 'Term Tracking Mobile Application',
       description:
         'Cross-platform mobile application with offline term, courses, note, and assessment tracking.',
-      repo: 'https://github.com/hillaryzelasko/D424-MobileApp'
+      repo: 'https://github.com/hillaryzelasko/D424-MobileApp',
+      images: [
+        { src: 'imgs/img3.jpg', alt: 'Mobile app dashboard for tracking terms' },
+        { src: 'imgs/img4.jpg', alt: 'Course detail view in term tracking mobile app' }
+      ]
     }
   ],
   certifications: [
@@ -164,6 +172,17 @@ const renderProject = (project) => {
     <p>${project.description}</p>
     <a class="project-link" href="${project.repo}" target="_blank" rel="noreferrer">View Repository</a>
   `;
+  if (project.images?.length) {
+    const gallery = document.createElement('div');
+    gallery.className = 'project-images';
+    project.images.forEach((image) => {
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.alt = image.alt || `${project.name} screenshot`;
+      gallery.appendChild(img);
+    });
+    card.appendChild(gallery);
+  }
   return card;
 };
 
