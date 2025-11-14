@@ -1,20 +1,21 @@
 :root {
   color-scheme: light dark;
-  --bg: #f8fafc;
-  --bg-dark: #0f172a;
-  --text: #0f172a;
-  --text-dark: #e2e8f0;
-  --accent: #2563eb;
-  --muted: #64748b;
-  --card: rgba(255, 255, 255, 0.75);
-  --card-dark: rgba(15, 23, 42, 0.75);
+  --bg: #f5f6fa;
+  --bg-dark: #0b1f3a;
+  --text: #1a1a1a;
+  --text-dark: #f5f7fb;
+  --accent: #4c8bf5;
+  --muted: #4d5c6d;
+  --muted-dark: #9fb6d9;
+  --card: rgba(255, 255, 255, 0.8);
+  --card-dark: rgba(11, 31, 58, 0.78);
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--bg), #dbeafe);
+  background: linear-gradient(135deg, var(--bg), #e1effd);
   color: var(--text);
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@ body {
 }
 
 body.dark {
-  background: linear-gradient(135deg, var(--bg-dark), #1e293b);
+  background: linear-gradient(135deg, var(--bg-dark), #102a54);
   color: var(--text-dark);
 }
 
@@ -32,14 +33,16 @@ main {
   backdrop-filter: blur(18px);
   background: var(--card);
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+  border: 1px solid rgba(76, 139, 245, 0.1);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.14);
   padding: 2.5rem clamp(1.25rem, 4vw, 3rem);
   transition: background 0.4s ease, color 0.4s ease;
 }
 
 body.dark main {
   background: var(--card-dark);
-  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.6);
+  border-color: rgba(225, 239, 253, 0.08);
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.5);
 }
 
 header {
@@ -71,11 +74,21 @@ header p {
   font-size: 0.95rem;
 }
 
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact a:hover,
+.contact a:focus {
+  text-decoration: underline;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(76, 139, 245, 0.12);
   color: var(--accent);
   border-radius: 999px;
   padding: 0.4rem 0.85rem;
@@ -87,7 +100,7 @@ header p {
 .pill:hover,
 .pill:focus {
   transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 8px 18px rgba(76, 139, 245, 0.25);
 }
 
 section {
@@ -106,21 +119,23 @@ section h2 {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   border-radius: 16px;
   padding: 1.25rem;
-  border: 1px solid rgba(98, 132, 180, 0.25);
+  border: 1px solid rgba(76, 139, 245, 0.14);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 body.dark .card {
-  background: rgba(15, 23, 42, 0.85);
-  border-color: rgba(148, 163, 184, 0.2);
+  background: rgba(11, 31, 58, 0.82);
+  border-color: rgba(225, 239, 253, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.16);
 }
 
 .card h3 {
@@ -163,6 +178,30 @@ body.dark .card {
   text-decoration: underline;
 }
 
+body.dark .pill {
+  background: rgba(76, 139, 245, 0.22);
+  color: #e1effd;
+}
+
+body.dark .contact a,
+body.dark .project-link {
+  color: #e1effd;
+}
+
+body.dark .contact a:hover,
+body.dark .contact a:focus,
+body.dark .project-link:hover,
+body.dark .project-link:focus {
+  color: #f7f7f7;
+}
+
+body.dark header p,
+body.dark .card h4,
+body.dark .project-card p,
+body.dark .meta {
+  color: var(--muted-dark);
+}
+
 .certifications-list {
   margin: 0.85rem 0 0;
   padding: 0;
@@ -200,7 +239,7 @@ ul {
 }
 
 .skills-list li {
-  background: rgba(15, 23, 42, 0.05);
+  background: rgba(76, 139, 245, 0.12);
   color: inherit;
   padding: 0.55rem 0.9rem;
   border-radius: 12px;
@@ -209,7 +248,7 @@ ul {
 }
 
 body.dark .skills-list li {
-  background: rgba(226, 232, 240, 0.1);
+  background: rgba(225, 239, 253, 0.18);
 }
 
 .toolbar {
@@ -223,7 +262,7 @@ body.dark .skills-list li {
 
 .toolbar button {
   background: var(--accent);
-  color: white;
+  color: #f7f7f7;
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 12px;
@@ -236,7 +275,7 @@ body.dark .skills-list li {
 .toolbar button:hover,
 .toolbar button:focus {
   transform: translateY(-1px);
-  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 12px 25px rgba(76, 139, 245, 0.25);
 }
 
 @media (max-width: 720px) {
