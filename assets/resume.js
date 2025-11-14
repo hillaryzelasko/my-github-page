@@ -100,7 +100,7 @@ const resume = {
       ]
     }
   ],
-  resumeDownload: '../Hillary Zelasko - Resume 2025.docx',
+  resumeDownload: 'assets/Hillary Zelasko - Resume 2025.docx',
   careerStartYear: 2006
 };
 
@@ -186,7 +186,8 @@ const hydrate = () => {
   const years = new Date().getFullYear() - resume.careerStartYear;
   document.getElementById('experience-years').textContent = `${years}+ years driving operational excellence`;
   const download = document.getElementById('download-resume');
-  download.href = resume.resumeDownload;
+  download.href = encodeURI(resume.resumeDownload);
+  download.setAttribute('download', 'Hillary Zelasko - Resume 2025.docx');
 };
 
 const toggleTheme = () => {
