@@ -1,6 +1,6 @@
 const resume = {
   tagline:
-    'Experienced healthcare administrative professional with a strong background in utilization management and operational efficiency. Skilled in automating workflows, improving data accuracy, and supporting cross-functional teams to enhance productivity and quality. Known for identifying process gaps and developing practical, technology-driven solutions using Power Automate Desktop and Excel. Passionate about optimizing systems that improve both team performance and the member experience.',
+    'Software Engineer with a solid foundation in application development, debugging, and systems analysis, supported by a Bachelor of Science in Software Engineering. Experienced in full-stack mobile development, secure data workflows, and translating requirements into reliable, user-focused solutions. Skilled in C#, .NET MAUI, SQL, Git, and Agile practices, with growing experience in identity and access management. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
   contact: [
     { label: 'Phone', value: '502-902-7727', href: 'tel:5029027727' },
     {
