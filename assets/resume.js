@@ -1,6 +1,6 @@
 const resume = {
   tagline:
-    'Process Improvement Professional and Software Engineer with a strong foundation in application development, automation, debugging, and systems analysis. Experienced in creating Power Apps, building Power Automate workflows, improving SharePoint-based processes, supporting Epic transition readiness, and translating operational requirements into reliable, user-focused solutions that reduce processing time while improving quality and output. Skilled in C#, .NET MAUI, SQL, Git, and Agile practices, with growing experience in identity and access management. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
+    'Process Improvement Professional and Software Engineer with a strong foundation in application development, automation, debugging, and systems analysis. Experienced in creating Power Apps, building Power Automate workflows, improving SharePoint-based processes, supporting Epic transition readiness, and translating operational requirements into reliable, user-focused solutions that reduce processing time while improving quality and output. Skilled in C#, .NET MAUI, SQL, Git, and Agile practices. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
   contact: [
     { label: 'Phone', value: '502-902-7727', href: 'tel:5029027727' },
     {
