@@ -1,6 +1,6 @@
 const resume = {
   tagline:
-    'Software Engineer with a solid foundation in application development, debugging, and systems analysis, supported by a Bachelor of Science in Software Engineering. Experienced in full-stack mobile development, secure data workflows, and translating requirements into reliable, user-focused solutions. Skilled in C#, .NET MAUI, SQL, Git, and Agile practices, with growing experience in identity and access management. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
+    'Process Improvement Professional and Software Engineer with a strong foundation in application development, automation, debugging, and systems analysis. Experienced in creating Power Apps, building Power Automate workflows, improving SharePoint-based processes, supporting Epic transition readiness, and translating operational requirements into reliable, user-focused solutions that reduce processing time while improving quality and output. Skilled in C#, .NET MAUI, SQL, Git, and Agile practices, with growing experience in identity and access management. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
   contact: [
     { label: 'Phone', value: '502-902-7727', href: 'tel:5029027727' },
     {
@@ -10,16 +10,31 @@ const resume = {
     }
   ],
   skills: [
-    'Process Tools: Power Automate, SharePoint Lists, Lucidchart',
-    'Data Analytics: Advanced Excel, MySQL',
-    'Programming: CSS/HTML/JavaScript, SQL/RDBMS, C#/.NET, Python',
-    'Soft Skills: Time Management, Collaboration, Analytical Thinking, Process Optimization'
+    'Process Improvement: Workflow Analysis, Process Mapping, Quality Improvement, Operational Efficiency',
+    'Power Platform: Power Apps, Power Automate, Power BI, SharePoint Lists, Microsoft 365',
+    'Data & Reporting: Advanced Excel, MySQL, Audits, Queue Analysis, Performance Tracking',
+    'Software Development: HTML/CSS/JavaScript, C#/.NET, Python, SQL/RDBMS, Git',
+    'Collaboration: Epic Transition Support, Documentation, Stakeholder Feedback, Training Support'
   ],
   experience: [
     {
+      role: 'Process Improvement Professional 2',
+      company: 'Humana Inc.',
+      timeframe: 'December 17, 2025 - Present',
+      location: 'Remote',
+      highlights: [
+        'Support process improvement initiatives across utilization management workflows by analyzing current-state processes, identifying friction points, and translating requirements into practical operational solutions.',
+        'Create Power Apps, Power Automate flows, Power BI reporting tools, SharePoint Lists, and supporting process tools that reduce time spent on manual workflows while increasing quality, output quantity, and team consistency.',
+        'Contribute to Epic transition readiness by documenting workflow impacts, validating process changes, coordinating updates with partner teams, and helping associates prepare for new system expectations.',
+        'Create and maintain process documentation, workflow maps, job aids, and SharePoint content to keep operational guidance accurate, searchable, and aligned with evolving business needs.',
+        'Partner with leaders, subject matter experts, and frontline associates to gather feedback, troubleshoot workflow issues, and support adoption of improved processes.',
+        'Use Excel, Power BI, reporting, audits, and queue analysis to surface trends, monitor process performance, and recommend targeted improvements.'
+      ]
+    },
+    {
       role: 'UM Administrative Coordinator 3',
       company: 'Humana Inc.',
-      timeframe: 'April 2025 – Present',
+      timeframe: 'April 2025 - December 2025',
       location: 'Remote',
       highlights: [
         'Lead process improvements by building Power Automate flows that increased productivity by 200% and eliminated manual errors across multiple workflows.',
@@ -32,7 +47,7 @@ const resume = {
     {
       role: 'UM Administrative Coordinator 2',
       company: 'Humana Inc.',
-      timeframe: 'March 2023 – April 2025',
+      timeframe: 'March 2023 - April 2025',
       location: 'Remote',
       highlights: [
         'Served as Wellbeing Advocate, Preceptor, and Transition Team member to mentor peers and strengthen process adoption.',
@@ -43,7 +58,7 @@ const resume = {
     {
       role: 'Owner & Lead Videographer',
       company: 'Zelasko Productions LLC',
-      timeframe: 'May 2022 – April 2024',
+      timeframe: 'May 2022 - April 2024',
       location: 'Louisville, KY',
       highlights: [
         'Developed an RDBMS in C# and MySQL to track client accounts, payments, and schedules with accurate reporting.',
@@ -53,7 +68,7 @@ const resume = {
     {
       role: 'Project Coordinator',
       company: 'Network Technology Services LLC',
-      timeframe: 'October 2019 – March 2022',
+      timeframe: 'October 2019 - March 2022',
       location: 'Remote',
       highlights: [
         'Directed project teams, allocated resources, and balanced competing demands to keep initiatives on schedule.',
@@ -64,7 +79,7 @@ const resume = {
     {
       role: 'Implementation Coordinator',
       company: 'Bank of America Merchant Services',
-      timeframe: 'April 2006 – December 2011',
+      timeframe: 'April 2006 - December 2011',
       location: 'Louisville, KY',
       highlights: [
         'Promoted to automate high-volume data updates with speed and accuracy.',
@@ -115,27 +130,50 @@ const resume = {
       details: [
         'Focused on software engineering principles, automation, and data-driven problem solving.'
       ]
-    },
-        {
-      school: 'Western Governors University',
-      degree: 'M.S. Data Analytics',
-      timeframe: 'In Progress',
-      details: [
-        'Focusing on statistical data mining, machine learning, and data optimization.'
-      ]
     }
   ],
   resumeDownload: 'assets/Hillary Zelasko - Resume 2025.docx',
   careerStartYear: 2006
 };
 
+const createElement = (tagName, options = {}) => {
+  const element = document.createElement(tagName);
+  if (options.className) {
+    element.className = options.className;
+  }
+  if (options.text) {
+    element.textContent = options.text;
+  }
+  return element;
+};
+
+const createExternalLink = (href, text) => {
+  const link = createElement('a', { className: 'project-link', text });
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noreferrer';
+  return link;
+};
+
+const createMeta = (...items) => {
+  const meta = createElement('div', { className: 'meta' });
+  items.filter(Boolean).forEach((item) => {
+    meta.appendChild(createElement('span', { text: item }));
+  });
+  return meta;
+};
+
 const formatContact = (item) => {
   const span = document.createElement('span');
-  span.innerHTML = `<strong>${item.label}:</strong> ${
-    item.href
-      ? `<a href="${item.href}" target="_blank" rel="noreferrer">${item.value}</a>`
-      : item.value
-  }`;
+  const label = createElement('strong', { text: `${item.label}:` });
+  span.append(label, ' ');
+  if (item.href) {
+    const link = createElement('a', { text: item.value });
+    link.href = item.href;
+    span.appendChild(link);
+  } else {
+    span.append(item.value);
+  }
   return span;
 };
 
@@ -149,14 +187,11 @@ const mountList = (selector, items, renderItem) => {
 const renderExperience = (experience) => {
   const card = document.createElement('article');
   card.className = 'card';
-  card.innerHTML = `
-    <h3>${experience.role}</h3>
-    <h4>${experience.company}</h4>
-    <div class="meta">
-      <span>${experience.timeframe}</span>
-      <span>${experience.location}</span>
-    </div>
-  `;
+  card.append(
+    createElement('h3', { text: experience.role }),
+    createElement('h4', { text: experience.company }),
+    createMeta(experience.timeframe, experience.location)
+  );
   const list = document.createElement('ul');
   experience.highlights.forEach((point) => {
     const li = document.createElement('li');
@@ -170,30 +205,17 @@ const renderExperience = (experience) => {
 const renderProject = (project) => {
   const card = document.createElement('article');
   card.className = 'card project-card';
-  card.innerHTML = `
-    <h3>${project.name}</h3>
-    <p>${project.description}</p>
-  `;
+  card.append(
+    createElement('h3', { text: project.name }),
+    createElement('p', { text: project.description })
+  );
 
   const links = document.createElement('div');
   links.className = 'project-links';
-
-  const repoLink = document.createElement('a');
-  repoLink.className = 'project-link';
-  repoLink.href = project.repo;
-  repoLink.target = '_blank';
-  repoLink.rel = 'noreferrer';
-  repoLink.textContent = 'View Repository';
-  links.appendChild(repoLink);
+  links.appendChild(createExternalLink(project.repo, 'View Repository'));
 
   if (project.download) {
-    const downloadLink = document.createElement('a');
-    downloadLink.className = 'project-link';
-    downloadLink.href = project.download;
-    downloadLink.target = '_blank';
-    downloadLink.rel = 'noreferrer';
-    downloadLink.textContent = 'Download App';
-    links.appendChild(downloadLink);
+    links.appendChild(createExternalLink(project.download, 'Download App'));
   }
 
   card.appendChild(links);
@@ -209,6 +231,7 @@ const renderProject = (project) => {
       const img = document.createElement('img');
       img.src = image.src;
       img.alt = image.alt || `${project.name} screenshot`;
+      img.loading = 'lazy';
       gallery.appendChild(img);
     });
     card.appendChild(gallery);
@@ -226,23 +249,39 @@ const setupProjectImageModal = () => {
   if (!modal) {
     modal = document.createElement('div');
     modal.className = 'image-modal';
-    modal.innerHTML = `
-      <div class="image-modal__backdrop" data-modal-close></div>
-      <figure class="image-modal__figure">
-        <img src="" alt="" />
-      </figure>
-      <button type="button" class="image-modal__close" aria-label="Close image" data-modal-close>&times;</button>
-    `;
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-hidden', 'true');
+
+    const backdrop = createElement('div', { className: 'image-modal__backdrop' });
+    backdrop.dataset.modalClose = 'true';
+
+    const figure = createElement('figure', { className: 'image-modal__figure' });
+    figure.appendChild(document.createElement('img'));
+
+    const closeButton = createElement('button', {
+      className: 'image-modal__close',
+      text: 'x'
+    });
+    closeButton.type = 'button';
+    closeButton.setAttribute('aria-label', 'Close image');
+    closeButton.dataset.modalClose = 'true';
+
+    modal.append(backdrop, figure, closeButton);
     document.body.appendChild(modal);
   }
 
   const modalImage = modal.querySelector('img');
   const closeElements = modal.querySelectorAll('[data-modal-close]');
+  const closeButton = modal.querySelector('.image-modal__close');
+  let lastFocusedElement;
 
   const closeModal = () => {
     modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
     modalImage.src = '';
     modalImage.alt = '';
+    lastFocusedElement?.focus();
   };
 
   if (!modal.dataset.bound) {
@@ -258,9 +297,12 @@ const setupProjectImageModal = () => {
   }
 
   const openModal = (image) => {
+    lastFocusedElement = document.activeElement;
     modalImage.src = image.src;
     modalImage.alt = image.alt;
     modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    closeButton.focus();
   };
 
   projectImages.forEach((image) => {
@@ -286,9 +328,7 @@ const setupProjectImageModal = () => {
 const renderCertifications = (certifications) => {
   const card = document.createElement('article');
   card.className = 'card compact-card';
-  card.innerHTML = `
-    <h3>Professional Certifications</h3>
-  `;
+  card.appendChild(createElement('h3', { text: 'Professional Certifications' }));
   const list = document.createElement('ul');
   list.className = 'certifications-list';
   certifications.forEach((certification) => {
@@ -303,13 +343,11 @@ const renderCertifications = (certifications) => {
 const renderEducation = (edu) => {
   const card = document.createElement('article');
   card.className = 'card';
-  card.innerHTML = `
-    <h3>${edu.degree}</h3>
-    <h4>${edu.school}</h4>
-    <div class="meta">
-      <span>${edu.timeframe}</span>
-    </div>
-  `;
+  card.append(
+    createElement('h3', { text: edu.degree }),
+    createElement('h4', { text: edu.school }),
+    createMeta(edu.timeframe)
+  );
   const list = document.createElement('ul');
   edu.details.forEach((detail) => {
     const li = document.createElement('li');
@@ -346,16 +384,26 @@ const hydrate = () => {
   download.setAttribute('download', 'Hillary Zelasko - Resume 2025.docx');
 };
 
+const themeToggle = document.getElementById('theme-toggle');
+
+const syncThemeToggle = () => {
+  const isDark = document.body.classList.contains('dark');
+  themeToggle.textContent = isDark ? 'Use Light Theme' : 'Use Dark Theme';
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+};
+
 const toggleTheme = () => {
   document.body.classList.toggle('dark');
   localStorage.setItem('prefers-dark-resume', document.body.classList.contains('dark'));
+  syncThemeToggle();
 };
 
-document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+themeToggle.addEventListener('click', toggleTheme);
 
 const prefersDark = localStorage.getItem('prefers-dark-resume');
 if (prefersDark === 'true' || (prefersDark === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.body.classList.add('dark');
 }
 
+syncThemeToggle();
 hydrate();
