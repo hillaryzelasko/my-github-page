@@ -1,6 +1,6 @@
 const resume = {
   tagline:
-    'Process Improvement Professional and Software Engineer with a strong foundation in application development, automation, debugging, and systems analysis. Experienced in creating Power Apps, building Power Automate workflows, improving SharePoint-based processes, supporting Epic transition readiness, and translating operational requirements into reliable, user-focused solutions that reduce processing time while improving quality and output. Skilled in dotNet, SQL, Git, and Agile practices. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
+    'Process Improvement Professional and Software Engineer with a strong foundation in application development, automation, debugging, and systems analysis. Experienced in creating Power Apps, building Power Automate workflows, improving SharePoint-based processes, supporting Epic transition readiness, and translating operational requirements into reliable, user-focused solutions that reduce processing time while improving quality and output. Skilled in C#, SQL, Git, and Agile practices. Recognized for quick learning, process improvement, and writing clean, maintainable code.',
   contact: [
     { label: 'Phone', value: '502-902-7727', href: 'tel:5029027727' },
     {
@@ -13,7 +13,7 @@ const resume = {
     'Process Improvement: Workflow Analysis, Process Mapping, Quality Improvement, Operational Efficiency',
     'Power Platform: Power Apps, Power Automate, Power BI, SharePoint Lists, Microsoft 365',
     'Data & Reporting: Advanced Excel, MySQL, Audits, Queue Analysis, Performance Tracking',
-    'Software Development: HTML/CSS/JavaScript, dotNet, Python, SQL/RDBMS, Git',
+    'Software Development: HTML/CSS/JavaScript, C#, Python, SQL/RDBMS, Git',
     'Collaboration: Epic Transition Support, Documentation, Stakeholder Feedback, Training Support'
   ],
   experience: [
@@ -116,7 +116,7 @@ const resume = {
   certifications: [
     'Microsoft Client/Server',
     'CSS/HTML/JavaScript',
-    'dotNet',
+    'C#',
     'Python',
     'Project+',
     'AWS Cloud',
