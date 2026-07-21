@@ -118,7 +118,7 @@ const resume = {
     }
   ],
   resumeDownload: 'assets/Hillary Zelasko - Resume 2025.docx',
-  careerStartYear: 2019
+  careerStartYear: 2006
 };
 
 const createElement = (tagName, options = {}) => {
