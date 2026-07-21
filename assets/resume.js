@@ -23,12 +23,10 @@ const resume = {
       timeframe: 'December 17, 2025 - Present',
       location: 'Remote',
       highlights: [
-        'Support process improvement initiatives across utilization management workflows by analyzing current-state processes, identifying friction points, and translating requirements into practical operational solutions.',
-        'Create Power Apps, Power Automate flows, Power BI reporting tools, SharePoint Lists, and supporting process tools that reduce time spent on manual workflows while increasing quality, output quantity, and team consistency.',
-        'Contribute to Epic transition readiness by documenting workflow impacts, validating process changes, coordinating updates with partner teams, and helping associates prepare for new system expectations.',
-        'Create and maintain process documentation, workflow maps, job aids, and SharePoint content to keep operational guidance accurate, searchable, and aligned with evolving business needs.',
-        'Partner with leaders, subject matter experts, and frontline associates to gather feedback, troubleshoot workflow issues, and support adoption of improved processes.',
-        'Use Excel, Power BI, reporting, audits, and queue analysis to surface trends, monitor process performance, and recommend targeted improvements.'
+        'Analyze utilization management workflows, identify friction points, and translate requirements into practical process improvements.',
+        'Create Power Apps, Power Automate flows, Power BI reports, and SharePoint tools that reduce manual work while improving quality and output.',
+        'Support Epic transition readiness through workflow documentation, process validation, partner coordination, and associate preparation.',
+        'Use Excel, Power BI, audits, and queue analysis to monitor performance and recommend targeted improvements.'
       ]
     },
     {
@@ -37,11 +35,9 @@ const resume = {
       timeframe: 'April 2025 - December 2025',
       location: 'Remote',
       highlights: [
-        'Lead process improvements by building Power Automate flows that increased productivity by 200% and eliminated manual errors across multiple workflows.',
-        'Serve as subject matter expert for the upcoming Epic release to guide readiness across partner teams.',
-        'Manage and update OneHome/Epic SharePoint content to ensure data accuracy and workflow alignment.',
-        'Conduct associate quality audits and facilitate team meetings to drive operational consistency and compliance.',
-        'Provide queue oversight and workload redistribution to maintain SLA targets.'
+        'Built Power Automate flows that increased productivity by 200% and reduced manual workflow errors.',
+        'Managed OneHome/Epic SharePoint content for data accuracy and workflow alignment.',
+        'Conducted quality audits and team meetings to improve consistency and compliance.'
       ]
     },
     {
@@ -50,9 +46,9 @@ const resume = {
       timeframe: 'March 2023 - April 2025',
       location: 'Remote',
       highlights: [
-        'Served as Wellbeing Advocate, Preceptor, and Transition Team member to mentor peers and strengthen process adoption.',
-        'Acted as subject matter expert across multiple utilization management workflows to uphold consistency and compliance.',
-        'Processed home health authorization requests with a focus on accuracy and timely submission.'
+        'Mentored peers as Wellbeing Advocate, Preceptor, and Transition Team member.',
+        'Served as subject matter expert across utilization management workflows to support consistency and compliance.',
+        'Processed home health authorization requests with accuracy and timely submission.'
       ]
     },
     {
@@ -61,8 +57,8 @@ const resume = {
       timeframe: 'May 2022 - April 2024',
       location: 'Louisville, KY',
       highlights: [
-        'Developed an RDBMS in C# and MySQL to track client accounts, payments, and schedules with accurate reporting.',
-        'Created and maintained the company website with continuously updated content to expand the client base.'
+        'Developed a C#/MySQL RDBMS to track client accounts, payments, schedules, and reporting.',
+        'Created and maintained the company website with up-to-date content to support client growth.'
       ]
     },
     {
@@ -71,20 +67,9 @@ const resume = {
       timeframe: 'October 2019 - March 2022',
       location: 'Remote',
       highlights: [
-        'Directed project teams, allocated resources, and balanced competing demands to keep initiatives on schedule.',
-        'Managed project risks, issues, and change requests to ensure stakeholder satisfaction.',
-        'Leveraged advanced Excel reporting, pivot tables, and complex formulas to visualize data for stakeholders.'
-      ]
-    },
-    {
-      role: 'Implementation Coordinator',
-      company: 'Bank of America Merchant Services',
-      timeframe: 'April 2006 - December 2011',
-      location: 'Louisville, KY',
-      highlights: [
-        'Promoted to automate high-volume data updates with speed and accuracy.',
-        'Reduced SLA times by delivering a Work in Progress report via Microsoft Access.',
-        'Served as Vital subject matter expert and supported the release of the new database.'
+        'Directed project teams, allocated resources, and kept work on schedule amid competing demands.',
+        'Managed risks, issues, and change requests to support stakeholder satisfaction.',
+        'Used advanced Excel reporting, pivot tables, and formulas to visualize stakeholder data.'
       ]
     }
   ],
@@ -133,7 +118,7 @@ const resume = {
     }
   ],
   resumeDownload: 'assets/Hillary Zelasko - Resume 2025.docx',
-  careerStartYear: 2006
+  careerStartYear: 2019
 };
 
 const createElement = (tagName, options = {}) => {
