@@ -117,7 +117,8 @@ const resume = {
       ]
     }
   ],
-  resumeDownload: 'assets/Hillary Zelasko - Resume 2026 - Updated.docx',
+  resumeDownload:
+    'https://hillaryzelasko.github.io/my-github-page/assets/Hillary Zelasko - Resume 2026 - Updated.docx?v=2026-07-22',
   careerStartYear: 2006
 };
 
