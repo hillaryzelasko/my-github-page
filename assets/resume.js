@@ -20,7 +20,7 @@ const resume = {
     {
       role: 'Process Improvement Professional 2',
       company: 'Humana Inc.',
-      timeframe: 'December 17, 2025 - Present',
+      timeframe: 'December 14, 2025 - Present',
       location: 'Remote',
       highlights: [
         'Analyze utilization management workflows, identify friction points, and translate requirements into practical process improvements.',
