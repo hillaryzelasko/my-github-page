@@ -46,7 +46,7 @@ const resume = {
       timeframe: 'March 2023 - April 2025',
       location: 'Remote',
       highlights: [
-        'Mentored peers as Wellbeing Advocate, Preceptor, and Transition Team member.',
+        'Created and refined Power Automate flows for Letters and P2P workflows to reduce repetitive manual work and improve consistency.',
         'Served as subject matter expert across utilization management workflows to support consistency and compliance.',
         'Processed home health authorization requests with accuracy and timely submission.'
       ]
